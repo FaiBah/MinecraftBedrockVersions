@@ -1,10 +1,30 @@
 # 🎮 Minecraft Bedrock Versions
 
-> 📦 A simple, automatically updated list of **Minecraft Bedrock** versions.
+> 📦 An automatically updated database of Minecraft Bedrock **Stable** and **Preview** versions.
+>
+> Version data is collected from [MCPELIFE](https://mcpelife.com/).
 
-Version data is collected from [MCPELIFE](https://mcpelife.com/download/) and stored in [`versions.json`](https://github.com/FaiBah/MinecraftBedrockVersions/blob/main/versions.json).
+---
 
-## 📄 JSON
+## 📦 Version Overview
+
+| Type | Field | Description |
+|:--|:--|:--|
+| 🟢 Stable | `stable` | Latest stable version |
+| 🔵 Preview | `preview` | Latest preview version |
+| 📚 Stable History | `versions` | Stable version history |
+| 🧪 Preview History | `preview_versions` | Preview version history |
+
+<sub>Version lists are ordered from newest to oldest.</sub>
+
+## 🔗 JSON Data
+
+**File:** [`versions.json`](https://github.com/FaiBah/MinecraftBedrockVersions/blob/main/versions.json)
+
+[📥 View Raw JSON](https://raw.githubusercontent.com/FaiBah/MinecraftBedrockVersions/main/versions.json)
+
+<details>
+<summary>📄 JSON Structure</summary>
 
 ```json
 {
@@ -23,18 +43,18 @@ Version data is collected from [MCPELIFE](https://mcpelife.com/download/) and st
 }
 ```
 
-## 🧩 Fields
+</details>
 
-| Field                 | Description             |
-| --------------------- | ----------------------- |
-| 🟢 `stable`           | Latest stable version   |
-| 🔵 `preview`          | Latest preview version  |
-| 📦 `versions`         | Stable version history  |
-| 🧪 `preview_versions` | Preview version history |
-
-> ℹ️ Version lists are ordered from **newest to oldest**.
+---
 
 ## 🚀 Usage
+
+**Requirement:** [jq](https://jqlang.github.io/jq/)
+
+Base URL:
+```text
+https://raw.githubusercontent.com/FaiBah/MinecraftBedrockVersions/main/versions.json
+```
 
 ### 🟢 Latest Stable
 
@@ -48,7 +68,7 @@ curl -s https://raw.githubusercontent.com/FaiBah/MinecraftBedrockVersions/main/v
 curl -s https://raw.githubusercontent.com/FaiBah/MinecraftBedrockVersions/main/versions.json | jq -r '.preview'
 ```
 
-### 📦 All Stable Versions
+### 📚 All Stable Versions
 
 ```bash
 curl -s https://raw.githubusercontent.com/FaiBah/MinecraftBedrockVersions/main/versions.json | jq -r '.versions[]'
@@ -60,10 +80,8 @@ curl -s https://raw.githubusercontent.com/FaiBah/MinecraftBedrockVersions/main/v
 curl -s https://raw.githubusercontent.com/FaiBah/MinecraftBedrockVersions/main/versions.json | jq -r '.preview_versions[]'
 ```
 
+---
+
 ## 🌐 Source
 
-* 🔗 [MCPELIFE](https://mcpelife.com/download/)
-
-## ⚠️ Disclaimer
-
-This is an unofficial community project and is not affiliated with Mojang or Microsoft.
+- [MCPELIFE](https://mcpelife.com/)
